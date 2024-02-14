@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Dropdown</title>
+</head>
+<body>
+    <h1>Add to Dropdown</h1>
+    
+    <label for="textInput">Enter Text:</label>
+    <input type="text" id="textInput">
+
+    <label for="dropdown">Select Text:</label>
+    <select id="dropdown"></select>
+
+    <button onclick="addToDropdown()">Add to Dropdown</button>
+
+    <script>
+        function addToDropdown() {
+            // Get the input value
+            const inputValue = document.getElementById("textInput").value;
+
+            // Get the dropdown element
+            const dropdown = document.getElementById("dropdown");
+
+            // Create a new option element
+            const option = document.createElement("option");
+
+            // Set the text of the option to the input value
+            option.text = inputValue;
+
+            // Add the option to the dropdown
+            dropdown.add(option);
+
+            // Clear the input field
+            document.getElementById("textInput").value = "";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<h1 id = "change">
+    Name
+</h1>
+
+<button id="box1" onclick="change(event)">Ramesh</button>
+<button id="box2" onclick="change(event)">Kumar</button>
+<button id="box3" onclick="change(event)">Raj</button>
+<script>
+    var print = document.getElementById("change")
+    var box1 = document.getElementById("box1")
+    var box2 = document.getElementById("box2")
+    var box3 = document.getElementById("box3")
+
+    function change()
+    {
+        print.textContent=event.target.textContent
+    }
+
+</script>
